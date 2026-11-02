@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alfa Furnitures | Handcrafted Comfort & Storage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* --- CSS RESET & VARIABLES --- */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg-cream: #FAF7F2;
+      --bg-white: #FFFFFF;
+      --bg-sand: #F2ECE1;
+      --wood-dark: #382417;
+      --wood-medium: #6E472A;
+      --wood-light: #946845;
+      --accent-warm: #C87D43;
+      --text-main: #2C2523;
+      --text-muted: #6B615B;
+      --border-color: #E6DCD1;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --shadow-soft: 0 10px 30px rgba(56, 36, 23, 0.08);
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --font-heading: 'Playfair Display', serif;
+      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-cream);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* --- NAVIGATION --- */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(250, 247, 242, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-badge {
+      width: 44px;
+      height: 44px;
+      border: 2px solid var(--wood-medium);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+    }
+
+    .logo-badge svg {
+      width: 26px;
+      height: 26px;
+      fill: none;
+      stroke: var(--wood-medium);
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .brand-text h1 {
+      font-family: var(--font-heading);
+      font-size: 20px;
+      letter-spacing: 2px;
+      color: var(--wood-dark);
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    .brand-text span {
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--wood-light);
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-main);
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-warm);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .btn-wa-header {
+      background: #25D366;
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.25);
+    }
+
+    .btn-wa-header:hover {
+      background: #1ebc59;
+      transform: translateY(-2px);
+    }
+
+    /* --- HERO SECTION --- */
+    .hero {
+      padding: 60px 0 40px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent-warm);
+      background: var(--bg-sand);
+      padding: 6px 14px;
+      border-radius: 30px;
+      margin-bottom: 16px;
+    }
+
+    .hero-content h2 {
+      font-family: var(--font-heading);
+      font-size: 44px;
+      line-height: 1.2;
+      color: var(--wood-dark);
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 17px;
+      color: var(--text-muted);
+      margin-bottom: 30px;
+      max-width: 520px;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 16px;
+    }
+
+    .btn-primary {
+      background: var(--wood-dark);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 15px;
+      transition: var(--transition);
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      background: var(--wood-medium);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--wood-dark);
+      color: var(--wood-dark);
+      padding: 14px 28px;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 15px;
+      transition: var(--transition);
+    }
+
+    .btn-outline:hover {
+      background: var(--bg-sand);
+    }
+
+    .hero-img-box {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      height: 420px;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+    }
+
+    /* --- SECTION HEADERS --- */
+    .section-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-header .sub-badge {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--wood-light);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .section-header h3 {
+      font-family: var(--font-heading);
+      font-size: 34px;
+      color: var(--wood-dark);
+    }
+
+    /* --- CATEGORY BENTO MOSAIC (REFERENCE MATCH) --- */
+    .categories-section {
+      padding: 50px 0;
+    }
+
+    .category-mosaic {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 220px;
+      gap: 16px;
+    }
+
+    .bento-card {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(110, 71, 42, 0.15);
+      transition: var(--transition);
+    }
+
+    .bento-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 25px rgba(56, 36, 23, 0.18);
+    }
+
+    .bento-card img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s ease;
+    }
+
+    .bento-card:hover img {
+      transform: scale(1.06);
+    }
+
+    /* Asymmetric Spans matching the reference */
+    .bento-card.tall {
+      grid-row: span 2;
+    }
+
+    .bento-card.wide {
+      grid-column: span 2;
+    }
+
+    .bento-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(20, 12, 7, 0.88) 0%, rgba(20, 12, 7, 0.2) 50%, transparent 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 20px;
+      color: #fff;
+    }
+
+    .bento-overlay h4 {
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+      color: #FFFFFF;
+    }
+
+    .bento-overlay span {
+      font-size: 13px;
+      color: #E0D4C8;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 500;
+    }
+
+    /* --- WHY ALFA SECTION --- */
+    .why-section {
+      padding: 70px 0;
+      background: var(--bg-sand);
+      margin: 40px 0;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .why-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .why-card {
+      background: var(--bg-white);
+      padding: 24px;
+      border-radius: var(--radius-md);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+      border: 1px solid var(--border-color);
+    }
+
+    .why-card .icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-sm);
+      background: var(--bg-sand);
+      color: var(--wood-medium);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+      font-size: 20px;
+    }
+
+    .why-card h5 {
+      font-size: 16px;
+      color: var(--wood-dark);
+      margin-bottom: 6px;
+    }
+
+    .why-card p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* --- PRODUCTS & DYNAMIC FILTERING --- */
+    .products-section {
+      padding: 60px 0;
+    }
+
+    .filter-bar {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+
+    .filter-btn {
+      background: var(--bg-white);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--wood-dark);
+      color: #fff;
+      border-color: var(--wood-dark);
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .product-card {
+      background: var(--bg-white);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .product-thumb {
+      height: 220px;
+      position: relative;
+      background: #f5f5f5;
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(56, 36, 23, 0.85);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .product-info {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .product-category-tag {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent-warm);
+      margin-bottom: 4px;
+    }
+
+    .product-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--wood-dark);
+      margin-bottom: 6px;
+    }
+
+    .product-specs {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+
+    .product-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--border-color);
+      padding-top: 14px;
+    }
+
+    .product-price {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--wood-dark);
+    }
+
+    .btn-wa-card {
+      background: #25D366;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition);
+    }
+
+    .btn-wa-card:hover {
+      background: #1ebc59;
+    }
+
+    /* --- CONTACT & FOOTER --- */
+    .contact-section {
+      background: var(--wood-dark);
+      color: #fff;
+      padding: 70px 0 30px;
+      margin-top: 60px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 1fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .contact-grid h4 {
+      font-family: var(--font-heading);
+      font-size: 20px;
+      margin-bottom: 18px;
+      color: #F2ECE1;
+    }
+
+    .contact-info-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      font-size: 14px;
+      color: #D4C7BA;
+    }
+
+    .contact-info-list a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 24px;
+      text-align: center;
+      font-size: 13px;
+      color: #A3968A;
+    }
+
+    /* --- FLOATING WHATSAPP CTA --- */
+    .floating-wa {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #25D366;
+      color: #fff;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+      z-index: 999;
+      transition: var(--transition);
+    }
+
+    .floating-wa:hover {
+      transform: scale(1.1);
+    }
+
+    .floating-wa svg {
+      width: 32px;
+      height: 32px;
+      fill: #fff;
+    }
+
+    /* --- RESPONSIVE BREAKPOINTS --- */
+    @media (max-width: 992px) {
+      .hero-grid, .why-grid, .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .category-mosaic {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 200px;
+      }
+      .bento-card.tall {
+        grid-row: span 1;
+      }
+      .bento-card.wide {
+        grid-column: span 1;
+      }
+      .nav-links {
+        display: none; /* simple mobile bypass */
+      }
+    }
+
+    @media (max-width: 600px) {
+      .category-mosaic {
+        grid-template-columns: 1fr;
+      }
+      .why-cards {
+        grid-template-columns: 1fr;
+      }
+      .hero-content h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav-wrap">
+      <a href="#home" class="brand-logo">
+        <div class="logo-badge">
+          <!-- Circular Emblem Inspired by your Logo -->
+          <svg viewBox="0 0 24 24">
+            <rect x="4" y="3" width="7" height="13" rx="1" />
+            <path d="M7.5 7v2" />
+            <path d="M12 12h5a2 2 0 0 1 2 2v2H12v-4z" />
+            <path d="M13 16l-1 4m5-4l1 4" />
+            <path d="M18 3l3 4" />
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1>Alfa</h1>
+          <span>Furnitures</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#why-alfa">Why Alfa</a></li>
+        <li><a href="#products">Catalog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Direct Sales WhatsApp Header -->
+        <a href="https://wa.me/919741498502?text=Hello%20Alfa%20Furnitures,%20I%20want%20to%20know%20more%20about%20your%20furniture%20collections." target="_blank" class="btn-wa-header">
+          <span>Chat on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="hero-tag">Direct From Workshop</span>
+        <h2>Crafting Enduring Comfort & Storage For Every Home.</h2>
+        <p>Premium teak wardrobes, heavy-gauge steel almirahs, and handcrafted sofas designed to last generations at uncompromised prices.</p>
+        <div class="hero-btns">
+          <a href="#categories" class="btn-primary">Browse Categories</a>
+          <a href="#why-alfa" class="btn-outline">Our Craftsmanship</a>
+        </div>
+      </div>
+      <div class="hero-img-box">
+        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1000&q=80" alt="Alfa Furnitures Living Room" />
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORY MOSAIC SECTION (REFERENCE MATCH) -->
+  <section class="categories-section" id="categories">
+    <div class="container">
+      <div class="section-header">
+        <span class="sub-badge">Explore Our Factory Showroom</span>
+        <h3>Furniture By Category</h3>
+      </div>
+
+      <!-- Bento Grid (Clicking a card scrolls to products and filters that tab) -->
+      <div class="category-mosaic">
+        
+        <!-- Tile 1: Almirah (Tall) -->
+        <div class="bento-card tall" onclick="filterCatalog('almirahs')">
+          <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=800&q=80" alt="Almirahs" />
+          <div class="bento-overlay">
+            <h4>Almirahs & Wardrobes</h4>
+            <span>View 2-Door & 3-Door Units &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Tile 2: Dining Tables -->
+        <div class="bento-card" onclick="filterCatalog('dining')">
+          <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=800&q=80" alt="Dining Tables" />
+          <div class="bento-overlay">
+            <h4>Dining Tables</h4>
+            <span>Solid Wood & Glass Sets &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Tile 3: Office Lockers (Tall) -->
+        <div class="bento-card tall" onclick="filterCatalog('storage')">
+          <img src="https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?auto=format&fit=crop&w=800&q=80" alt="Office Lockers" />
+          <div class="bento-overlay">
+            <h4>Lockers & Storage</h4>
+            <span>Industrial & Office Cupboards &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Tile 4: Premium Sofas (Wide) -->
+        <div class="bento-card wide" onclick="filterCatalog('sofas')">
+          <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1000&q=80" alt="Premium Sofas" />
+          <div class="bento-overlay">
+            <h4>Premium Sofas & Recliners</h4>
+            <span>L-Shape & Fabric Recliners &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Tile 5: Beds & Bedroom (Wide) -->
+        <div class="bento-card wide" onclick="filterCatalog('beds')">
+          <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&q=80" alt="Beds and Bedroom" />
+          <div class="bento-overlay">
+            <h4>King & Hydraulic Beds</h4>
+            <span>Storage Beds & Frames &rarr;</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY ALFA SECTION -->
+  <section class="why-section" id="why-alfa">
+    <div class="container why-grid">
+      <div>
+        <span class="sub-badge" style="color: var(--wood-light); font-weight: 700; letter-spacing: 2px; text-transform: uppercase;">Direct Manufacturing</span>
+        <h3 style="font-family: var(--font-heading); font-size: 34px; color: var(--wood-dark); margin: 8px 0 16px;">Why Alfa Furnitures?</h3>
+        <p style="color: var(--text-muted); margin-bottom: 24px;">Unlike generic retail stores, Alfa Furnitures builds in-house. That means thicker gauge metal sheets for our cupboards, seasoned solid timber for our wardrobes, and direct workshop prices without middleman markups.</p>
+        <a href="#contact" class="btn-primary">Visit Our Workshop</a>
+      </div>
+
+      <div class="why-cards">
+        <div class="why-card">
+          <div class="icon-box">🛡️</div>
+          <h5>Heavy-Duty Durability</h5>
+          <p>Anti-rust powder coated steel & seasoned anti-termite wood joinery.</p>
+        </div>
+        <div class="why-card">
+          <div class="icon-box">📐</div>
+          <h5>Custom Sizing</h5>
+          <p>Wardrobes and sofas custom built to fit your exact room measurements.</p>
+        </div>
+        <div class="why-card">
+          <div class="icon-box">🏷️</div>
+          <h5>Factory Pricing</h5>
+          <p>Save 25-35% compared to commercial showrooms by dealing direct.</p>
+        </div>
+        <div class="why-card">
+          <div class="icon-box">🚚</div>
+          <h5>Safe Home Delivery</h5>
+          <p>Carefully wrapped and assembled in your home by our own technicians.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS SHOWCASE & WHATSAPP ORDERS -->
+  <section class="products-section" id="products">
+    <div class="container">
+      <div class="section-header">
+        <span class="sub-badge">Featured Selection</span>
+        <h3>Our Products</h3>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterCatalog('all', this)">All Furniture</button>
+        <button class="filter-btn" onclick="filterCatalog('almirahs', this)">Almirahs & Wardrobes</button>
+        <button class="filter-btn" onclick="filterCatalog('sofas', this)">Sofas & Recliners</button>
+        <button class="filter-btn" onclick="filterCatalog('dining', this)">Dining Tables</button>
+        <button class="filter-btn" onclick="filterCatalog('beds', this)">Beds & Mattresses</button>
+        <button class="filter-btn" onclick="filterCatalog('storage', this)">Office & Lockers</button>
+      </div>
+
+      <!-- Product Cards -->
+      <div class="product-grid" id="productGrid">
+        
+        <!-- Product 1: Almirah -->
+        <div class="product-card" data-category="almirahs">
+          <div class="product-thumb">
+            <span class="product-badge">Best Seller</span>
+            <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=600&q=80" alt="Teak Wood Almirah" />
+          </div>
+          <div class="product-info">
+            <span class="product-category-tag">Almirahs & Wardrobes</span>
+            <h4 class="product-title">Royal Teak 3-Door Wardrobe</h4>
+            <p class="product-specs">Solid Teak Wood • Full Dressing Mirror • 6 Storage Shelves + Safety Vault</p>
+            <div class="product-footer">
+              <span class="product-price">₹28,500</span>
+              <a href="#" class="btn-wa-card" onclick="sendWhatsAppEnquiry('Royal Teak 3-Door Wardrobe', 'ALFA-ALM-01', '₹28,500')">
+                Enquire
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2: Almirah (Steel) -->
+        <div class="product-card" data-category="almirahs storage">
+          <div class="product-thumb">
+            <img src="https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?auto=format&fit=crop&w=600&q=80" alt="Steel Cupboard" />
+          </div>
+          <div class="product-info">
+            <span class="product-category-tag">Steel Cupboard</span>
+            <h4 class="product-title">Heavy Gauge Steel Almirah</h4>
+            <p class="product-specs">Anti-Rust Powder Coated CRCA Steel • Dual Lock Vault • Lifetime Hinge</p>
+            <div class="product-footer">
+              <span class="product-price">₹14,900</span>
+              <a href="#" class="btn-wa-card" onclick="sendWhatsAppEnquiry('Heavy Gauge Steel Almirah', 'ALFA-STL-04', '₹14,900')">
+                Enquire
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3: Sofa -->
+        <div class="product-card" data-category="sofas">
+          <div class="product-thumb">
+            <span class="product-badge">New Arrival</span>
+            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=600&q=80" alt="L Shape Sofa" />
+          </div>
+          <div class="product-info">
+            <span class="product-category-tag">Sofas & Recliners</span>
+            <h4 class="product-title">Nordic 5-Seater L-Shape Sofa</h4>
+            <p class="product-specs">High-Density 40D Foam • Scratch-Resistant Suede Fabric • Hardwood Frame</p>
+            <div class="product-footer">
+              <span class="product-price">₹34,000</span>
+              <a href="#" class="btn-wa-card" onclick="sendWhatsAppEnquiry('Nordic 5-Seater L-Shape Sofa', 'ALFA-SOF-02', '₹34,000')">
+                Enquire
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4: Dining Table -->
+        <div class="product-card" data-category="dining">
+          <div class="product-thumb">
+            <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=600&q=80" alt="Dining Table" />
+          </div>
+          <div class="product-info">
+            <span class="product-category-tag">Dining Tables</span>
+            <h4 class="product-title">Solid Sheesham 6-Seater Table</h4>
+            <p class="product-specs">100% Solid Sheesham Wood • 6 Cushioned Ergonomic Chairs • Walnut Polish</p>
+            <div class="product-footer">
+              <span class="product-price">₹26,500</span>
+              <a href="#" class="btn-wa-card" onclick="sendWhatsAppEnquiry('Solid Sheesham 6-Seater Table', 'ALFA-DIN-09', '₹26,500')">
+                Enquire
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5: Bed -->
+        <div class="product-card" data-category="beds">
+          <div class="product-thumb">
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=600&q=80" alt="King Bed" />
+          </div>
+          <div class="product-info">
+            <span class="product-category-tag">Beds & Bedroom</span>
+            <h4 class="product-title">Hydraulic Storage King Bed</h4>
+            <p class="product-specs">Easy-Lift German Hydraulic Pumps • Massive Storage Box • Padded Headrest</p>
+            <div class="product-footer">
+              <span class="product-price">₹31,000</span>
+              <a href="#" class="btn-wa-card" onclick="sendWhatsAppEnquiry('Hydraulic Storage King Bed', 'ALFA-BED-05', '₹31,000')">
+                Enquire
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6: Office Lockers -->
+        <div class="product-card" data-category="storage">
+          <div class="product-thumb">
+            <img src="https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?auto=format&fit=crop&w=600&q=80" alt="Office Locker" />
+          </div>
+          <div class="product-info">
+            <span class="product-category-tag">Office & Lockers</span>
+            <h4 class="product-title">6-Door Industrial Staff Locker</h4>
+            <p class="product-specs">Individual Master Lock Keys • Ventilation Louvers • Cold Rolled Steel</p>
+            <div class="product-footer">
+              <span class="product-price">₹18,200</span>
+              <a href="#" class="btn-wa-card" onclick="sendWhatsAppEnquiry('6-Door Industrial Staff Locker', 'ALFA-LCK-11', '₹18,200')">
+                Enquire
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT & WORKSHOP LOCATION -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <h4>Alfa Furnitures</h4>
+          <p style="color: #D4C7BA; font-size: 14px; margin-bottom: 20px;">We specialize in durable metal & wooden storage solutions, luxury sofas, and customized home fittings built to your room specifications.</p>
+          <p style="color: #A3968A; font-size: 13px;">© 2026 Alfa Furnitures. All rights reserved.</p>
+        </div>
+
+        <div>
+          <h4>Showroom Timings</h4>
+          <ul class="contact-info-list">
+            <li><strong>Mon – Sat:</strong> 9:30 AM – 8:30 PM</li>
+            <li><strong>Sunday:</strong> 10:00 AM – 7:00 PM</li>
+            <li>Direct factory consultations welcome.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Showroom & Sales</h4>
+          <ul class="contact-info-list">
+            <li>📍 <strong>Showroom:</strong> Main Furniture Market Road</li>
+            <li>📞 <strong>Call Us:</strong> <a href="tel:+919876543210">+91 98765 43210</a></li>
+            <li>💬 <strong>WhatsApp:</strong> Instant quotes on custom dimensions</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        Designed for speed, clarity, and instant WhatsApp inquiries.
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/919741498502?text=Hi%20Alfa%20Furnitures,%20I%20have%20a%20question%20about%20your%20furniture." class="floating-wa" target="_blank" title="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.12c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.13 8.13 0 0 1-1.25-4.35c0-4.49 3.65-8.14 8.14-8.14 2.18 0 4.22.85 5.76 2.39a8.1 8.1 0 0 1 2.39 5.76c0 4.49-3.65 8.15-8.15 8.15zm4.46-6.11c-.24-.12-1.45-.72-1.68-.8-.23-.08-.39-.12-.56.12-.17.24-.65.8-.8 1-.15.12-.3.14-.54.02-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.24-.02-.38.1-.5.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.56-1.35-.77-1.85-.2-.49-.4-.42-.56-.43h-.47c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.03 0 1.2 1.07 2.36 1.22 2.53.15.17 2.1 3.2 5.09 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.88.12.57-.09 1.45-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28z"/>
+    </svg>
+  </a>
+
+  <!-- VANILLA JAVASCRIPT LOGIC -->
+  <script>
+    // 1. WhatsApp Dynamic Phone Number (Replace with your actual business number)
+    const WA_PHONE = "919741498502";
+
+    // 2. Dynamic WhatsApp Order Message Generator
+    function sendWhatsAppEnquiry(productName, productCode, price) {
+      const message = `Hello Alfa Furnitures, I am interested in ordering/inquiring about:%0A%0A*Product:* ${productName}%0A*Code:* ${productCode}%0A*Price:* ${price}%0A%0APlease let me know the customization options and delivery details.`;
+      const waUrl = `https://wa.me/${WA_PHONE}?text=${message}`;
+      window.open(waUrl, '_blank');
+    }
+
+    // 3. Category Filter Engine (Works from both Bento clicks & Filter buttons)
+    function filterCatalog(category, buttonElement) {
+      const productGrid = document.getElementById('productGrid');
+      const cards = productGrid.getElementsByClassName('product-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+
+      // Update button visual states
+      if (buttonElement) {
+        buttons.forEach(btn => btn.classList.remove('active'));
+        buttonElement.classList.add('active');
+      } else {
+        // Find matching filter button and activate it
+        buttons.forEach(btn => {
+          btn.classList.remove('active');
+          if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(category)) {
+            btn.classList.add('active');
+          }
+        });
+      }
+
+      // Filter products
+      for (let i = 0; i < cards.length; i++) {
+        const cardCategories = cards[i].getAttribute('data-category');
+        if (category === 'all' || cardCategories.includes(category)) {
+          cards[i].style.display = 'flex';
+        } else {
+          cards[i].style.display = 'none';
+        }
+      }
+
+      // Smooth scroll down to products
+      const targetSection = document.getElementById('products');
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
+</body>
+</html>
