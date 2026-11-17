@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alfa Furnitures | Direct Factory Outlet — Steel Almirahs, Sofas & Wood Furniture</title>
+  <title>Alfa Furnitures | Direct Factory Outlet — Beds, Steel Beeros, Sofas & Home Interiors</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -220,7 +220,6 @@
       transform: scale(1.06);
     }
 
-    /* Balanced Overlay so furniture images show through clearly */
     .hero-overlay {
       position: absolute;
       inset: 0;
@@ -307,7 +306,6 @@
       text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
     }
 
-    /* Centered Product Lineup Box */
     .product-lineup-box {
       background: rgba(24, 14, 8, 0.58);
       border: 1px solid rgba(232, 168, 90, 0.4);
@@ -409,7 +407,6 @@
       color: var(--accent-gold);
     }
 
-    /* Corner Factory Seal Stamp */
     .factory-seal {
       position: absolute;
       top: 28px;
@@ -458,7 +455,6 @@
       text-transform: uppercase;
     }
 
-    /* Subtle Active Slide Indicator Bar */
     .slide-progress-bar {
       position: absolute;
       bottom: 0;
@@ -695,17 +691,40 @@
       box-shadow: var(--shadow-soft);
     }
 
+    /* Real Photo Thumb Framing: Shows full height/width cleanly without cutting off tall beeros */
     .product-thumb {
-      height: 220px;
+      height: 250px;
       position: relative;
-      background: #f5f5f5;
+      background: #F4EFE7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .product-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.45s ease;
+    }
+
+    .product-thumb.contain-fit img {
+      object-fit: contain;
+      padding: 8px;
+    }
+
+    .product-card:hover .product-thumb img {
+      transform: scale(1.04);
     }
 
     .product-badge {
       position: absolute;
       top: 12px;
       left: 12px;
-      background: rgba(56, 36, 23, 0.85);
+      background: rgba(56, 36, 23, 0.88);
       color: #fff;
       font-size: 11px;
       font-weight: 600;
@@ -713,6 +732,7 @@
       border-radius: 4px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
+      z-index: 2;
     }
 
     .product-info {
@@ -754,7 +774,7 @@
     }
 
     .product-price {
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 700;
       color: var(--wood-dark);
     }
@@ -900,7 +920,6 @@
         padding: 8px 12px;
       }
 
-      /* Mobile Hero: Lighter overlay & compact spacing so furniture photos pop */
       .hero-banner {
         min-height: 480px;
       }
@@ -965,7 +984,7 @@
         font-size: 11.5px;
       }
       .factory-seal {
-        display: none; /* Keeps mobile viewport clean so photo stays visible */
+        display: none;
       }
       .category-mosaic {
         grid-template-columns: 1fr;
@@ -1020,57 +1039,52 @@
 
   <!-- FULL-BLEED CENTERED AUTO-SLIDING HERO BANNER -->
   <section class="hero-banner" id="home">
-    <!-- Auto-changing Background Slides (No Arrow Buttons) -->
     <div class="hero-slides" id="heroSlides">
-      <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=1600&q=85');"></div>
+      <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=85');"></div>
+      <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=1600&q=85');"></div>
       <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1600&q=85');"></div>
-      <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=85');"></div>
-      <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=1600&q=85');"></div>
+      <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85');"></div>
     </div>
 
-    <!-- Centered Dark Warm Gradient Overlay -->
     <div class="hero-overlay"></div>
 
-    <!-- Centered Overlaid Sales Content -->
     <div class="container hero-inner">
       <div class="hero-overlay-content">
         <div class="hero-badge-row">
           <span class="factory-pill">Direct Manufacturer</span>
-          <span class="save-pill">Save Up To 30% Off Showroom Rates</span>
+          <span class="save-pill">Save Up To 53% Off Showroom Rates</span>
         </div>
 
         <h2>ALFA FURNITURES — <span>Heavy-Duty</span> Home & Office Furniture.</h2>
-        <p class="hero-subcopy">Built in our own workshop with thick-gauge anti-rust steel and seasoned solid teak & sheesham wood. Buy direct at honest factory prices.</p>
+        <p class="hero-subcopy">Built in our own workshop with thick-gauge anti-rust steel, seasoned solid teak & sheesham wood, and complete custom home interiors.</p>
 
-        <!-- Complete Product Lineup Display -->
         <div class="product-lineup-box">
           <span class="lineup-label">We Manufacture & Supply Everything:</span>
           <div class="lineup-tags">
-            <span>Steel Almirahs</span>
-            <span>Teak Wardrobes</span>
-            <span>Sofas & Recliners</span>
             <span>King & Queen Cots</span>
+            <span>Steel Beeros & Almirahs</span>
+            <span>Teak Wardrobes</span>
+            <span>Home Interiors</span>
+            <span>Sofas & Recliners</span>
             <span>Dining Tables</span>
             <span>Office Lockers</span>
-            <span>Bunker Beds</span>
           </div>
         </div>
 
         <div class="hero-cta-group">
           <a href="#categories" class="btn-hero-gold">Explore All Categories &darr;</a>
-          <a href="https://wa.me/919741498502?text=Hello%20Alfa%20Furnitures,%20please%20send%20me%20your%20factory%20price%20list%20and%20photos%20for%20Almirahs,%20Sofas,%20and%20Cots." target="_blank" class="btn-hero-wa">
+          <a href="https://wa.me/919741498502?text=Hello%20Alfa%20Furnitures,%20please%20send%20me%20your%20factory%20price%20list%20and%20photos%20for%20Beds,%20Steel%20Beeros,%20Sofas,%20and%20Interiors." target="_blank" class="btn-hero-wa">
             Get Factory Price List on WhatsApp
           </a>
         </div>
 
         <div class="hero-trust-strip">
           <span><b>✓</b> Heavy Gauge Steel & Solid Wood</span>
-          <span><b>✓</b> Custom Sizes & Colors</span>
+          <span><b>✓</b> Custom Sizes & Interiors</span>
           <span><b>✓</b> Home Delivery Available</span>
         </div>
       </div>
 
-      <!-- Factory-to-Customer Seal Badge -->
       <div class="factory-seal">
         <span class="seal-top">100% Genuine</span>
         <span class="seal-main">Factory To Customer</span>
@@ -1078,7 +1092,6 @@
       </div>
     </div>
 
-    <!-- Subtle Bottom Slide Progress Indicator -->
     <div class="slide-progress-bar" id="slideProgress">
       <div class="progress-segment active"></div>
       <div class="progress-segment"></div>
@@ -1092,20 +1105,47 @@
     <div class="container">
       <div class="section-header">
         <span class="sub-badge">Explore Our Factory Showroom</span>
-        <h3>Furniture By Category</h3>
+        <h3>Furniture & Interiors By Category</h3>
       </div>
 
       <div class="category-mosaic">
-        <!-- Col 1 (Tall): Almirahs & Wardrobes -->
-        <div class="bento-card tall" onclick="filterCatalog('almirahs')">
-          <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=800&q=80" alt="Almirahs" />
+        <!-- Col 1 (Tall — #1): Beds & Cots -->
+        <div class="bento-card tall" onclick="filterCatalog('beds')">
+          <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80" alt="Beds and Cots" />
           <div class="bento-overlay">
-            <h4>Almirahs & Wardrobes</h4>
-            <span>Steel & Wooden 2-Door / 3-Door &rarr;</span>
+            <h4>Beds & Hydraulic Cots</h4>
+            <span>King, Queen & Storage Frames &rarr;</span>
           </div>
         </div>
 
-        <!-- Col 2 Top: Dining Tables -->
+        <!-- Col 2 (Tall — #2): Beeros & Wardrobes -->
+        <div class="bento-card tall" onclick="filterCatalog('almirahs')">
+          <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=800&q=80" alt="Steel Beeros and Wardrobes" />
+          <div class="bento-overlay">
+            <h4>Beeros & Wardrobes</h4>
+            <span>Steel Almirahs & Teak 2/3-Door &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Col 3 Top: Sofas & Recliners -->
+        <div class="bento-card" onclick="filterCatalog('sofas')">
+          <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80" alt="Sofas and Recliners" />
+          <div class="bento-overlay">
+            <h4>Sofas & Recliners</h4>
+            <span>L-Shape, 3+2 & Lounge Chairs &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Col 4 Top: Home Interiors -->
+        <div class="bento-card" onclick="filterCatalog('interiors')">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Home Interiors" />
+          <div class="bento-overlay">
+            <h4>Home Interiors</h4>
+            <span>Modular Kitchens & TV Units &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Col 3 Bottom: Dining Tables -->
         <div class="bento-card" onclick="filterCatalog('dining')">
           <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=800&q=80" alt="Dining Tables" />
           <div class="bento-overlay">
@@ -1114,39 +1154,12 @@
           </div>
         </div>
 
-        <!-- Col 3 (Tall): Office Lockers & Storage -->
-        <div class="bento-card tall" onclick="filterCatalog('storage')">
+        <!-- Col 4 Bottom: Office Lockers & Storage -->
+        <div class="bento-card" onclick="filterCatalog('storage')">
           <img src="https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?auto=format&fit=crop&w=800&q=80" alt="Office Lockers" />
           <div class="bento-overlay">
             <h4>Lockers & Storage</h4>
             <span>Industrial & Office Cupboards &rarr;</span>
-          </div>
-        </div>
-
-        <!-- Col 4 Top: Premium Sofas -->
-        <div class="bento-card" onclick="filterCatalog('sofas')">
-          <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80" alt="Premium Sofas" />
-          <div class="bento-overlay">
-            <h4>Premium Sofas</h4>
-            <span>L-Shape & 3+2 Sets &rarr;</span>
-          </div>
-        </div>
-
-        <!-- Col 2 Bottom: Accent Chairs & Recliners -->
-        <div class="bento-card" onclick="filterCatalog('sofas')">
-          <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=800&q=80" alt="Recliners and Chairs" />
-          <div class="bento-overlay">
-            <h4>Recliners & Chairs</h4>
-            <span>Lounge & Office Seating &rarr;</span>
-          </div>
-        </div>
-
-        <!-- Col 4 Bottom: King & Hydraulic Beds -->
-        <div class="bento-card" onclick="filterCatalog('beds')">
-          <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80" alt="Beds and Bedroom" />
-          <div class="bento-overlay">
-            <h4>King & Hydraulic Cots</h4>
-            <span>Storage Beds & Frames &rarr;</span>
           </div>
         </div>
       </div>
@@ -1159,7 +1172,7 @@
       <div>
         <span class="sub-badge" style="color: var(--wood-light); font-weight: 700; letter-spacing: 2px; text-transform: uppercase;">Direct Manufacturing</span>
         <h3 style="font-family: var(--font-heading); font-size: 34px; color: var(--wood-dark); margin: 8px 0 16px;">Why Alfa Furnitures?</h3>
-        <p style="color: var(--text-muted); margin-bottom: 24px;">Unlike generic retail stores, Alfa Furnitures builds in-house. That means thicker gauge metal sheets for our cupboards, seasoned solid timber for our wardrobes, and direct workshop prices without middleman markups.</p>
+        <p style="color: var(--text-muted); margin-bottom: 24px;">Unlike generic retail stores, Alfa Furnitures builds in-house. That means thicker gauge metal sheets for our steel beeros, seasoned solid timber for our cots and wardrobes, and end-to-end custom home interiors without middleman markups.</p>
         <a href="#contact" class="btn-primary">Visit Our Workshop</a>
       </div>
 
@@ -1171,13 +1184,13 @@
         </div>
         <div class="why-card">
           <div class="icon-box">📐</div>
-          <h5>Custom Sizing</h5>
-          <p>Wardrobes and sofas custom built to fit your exact room measurements.</p>
+          <h5>Custom Sizing & Interiors</h5>
+          <p>Beds, beeros, TV units, and modular kitchens built to your floorplan.</p>
         </div>
         <div class="why-card">
           <div class="icon-box">🏷️</div>
           <h5>Factory Pricing</h5>
-          <p>Save 25-35% compared to commercial showrooms by dealing direct.</p>
+          <p>Save up to 53% compared to commercial showrooms by dealing direct.</p>
         </div>
         <div class="why-card">
           <div class="icon-box">🚚</div>
@@ -1188,132 +1201,359 @@
     </div>
   </section>
 
-  <!-- PRODUCTS SHOWCASE & WHATSAPP ORDERS -->
+  <!-- PRODUCTS SHOWCASE & WHATSAPP ORDERS (USING YOUR REAL LOCAL PHOTOS) -->
   <section class="products-section" id="products">
     <div class="container">
       <div class="section-header">
-        <span class="sub-badge">Featured Selection</span>
-        <h3>Our Products</h3>
+        <span class="sub-badge">Real Workshop & Showroom Stock</span>
+        <h3>Our Products & Interiors</h3>
       </div>
 
-      <!-- Filter Controls -->
       <div class="filter-bar">
-        <button class="filter-btn active" onclick="filterCatalog('all', this)">All Furniture</button>
-        <button class="filter-btn" onclick="filterCatalog('almirahs', this)">Almirahs & Wardrobes</button>
-        <button class="filter-btn" onclick="filterCatalog('sofas', this)">Sofas & Recliners</button>
-        <button class="filter-btn" onclick="filterCatalog('dining', this)">Dining Tables</button>
-        <button class="filter-btn" onclick="filterCatalog('beds', this)">Beds & Mattresses</button>
+        <button class="filter-btn active" onclick="filterCatalog('all', this)">All Furniture (18)</button>
+        <button class="filter-btn" onclick="filterCatalog('beds', this)">Beds & Cots (5)</button>
+        <button class="filter-btn" onclick="filterCatalog('almirahs', this)">Beeros & Wardrobes (4)</button>
+        <button class="filter-btn" onclick="filterCatalog('sofas', this)">Sofas & Recliners (5)</button>
+        <button class="filter-btn" onclick="filterCatalog('dining', this)">Dining Tables (4)</button>
+        <button class="filter-btn" onclick="filterCatalog('interiors', this)">Home Interiors</button>
         <button class="filter-btn" onclick="filterCatalog('storage', this)">Office & Lockers</button>
       </div>
 
-      <!-- Product Cards -->
       <div class="product-grid" id="productGrid">
-        <!-- Product 1: Almirah -->
-        <div class="product-card" data-category="almirahs">
+        <!-- ==================== 1. BEDS & COTS (bed1 - bed5) ==================== -->
+        <div class="product-card" data-category="beds">
           <div class="product-thumb">
-            <span class="product-badge">Best Seller</span>
-            <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=600&q=80" alt="Teak Wood Almirah" />
+            <span class="product-badge">#1 Most Demanded</span>
+            <img src="images/products/bed1.jpg" alt="Alfa Royal King Cot" />
           </div>
           <div class="product-info">
-            <span class="product-category-tag">Almirahs & Wardrobes</span>
-            <h4 class="product-title">Royal Teak 3-Door Wardrobe</h4>
-            <p class="product-specs">Solid Teak Wood • Full Dressing Mirror • 6 Storage Shelves + Safety Vault</p>
+            <span class="product-category-tag">Beds & Cots</span>
+            <h4 class="product-title">Alfa Royal King Size Cot</h4>
+            <p class="product-specs">Seasoned Solid Wood • Heavy-Duty Platform Support • Custom Size Available</p>
             <div class="product-footer">
-              <span class="product-price">₹28,500</span>
-              <a href="#" class="btn-wa-card" onclick="sendWhatsAppEnquiry('Royal Teak 3-Door Wardrobe', 'ALFA-ALM-01', '₹28,500')">
-                Enquire
+              <span class="product-price">Factory Direct</span>
+              <a href="#" class="btn-wa-card" onclick="sendWhatsAppEnquiry('Alfa Royal King Size Cot (Model 1)', 'ALFA-BED-01')">
+                Enquire Price
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Product 2: Almirah (Steel) -->
+        <div class="product-card" data-category="beds">
+          <div class="product-thumb">
+            <span class="product-badge">Storage Option</span>
+            <img src="images/products/bed2.jpg" alt="Alfa Designer Wooden Cot" />
+          </div>
+          <div class="product-info">
+            <span class="product-category-tag">Beds & Cots</span>
+            <h4 class="product-title">Designer Carved Headboard Cot</h4>
+            <p class="product-specs">Termite-Resistant Hardwood • Smooth Gloss Polish • Available in King & Queen</p>
+            <div class="product-footer">
+              <span class="product-price">Factory Direct</span>
+              <a href="#" class="btn-wa-card" onclick="sendWhatsAppEnquiry('Designer Carved Headboard Cot (Model 2)', 'ALFA-BED-02')">
+                Enquire Price
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="beds">
+          <div class="product-thumb">
+            <img src="images/products/bed3.jpg" alt="Alfa Modern Box Cot" />
+          </div>
+          <div class="product-info">
+            <span class="product-category-tag">Beds & Cots</span>
+            <h4 class="product-title">Modern Box Storage Cot</h4>
+            <p class="product-specs">Under-Bed Storage Compartments • Thick Plywood Base • Custom Finish</p>
+            <div class="product-footer">
+              <span class="product-price">Factory Direct</span>
+              <a href="#" class="btn-wa-card" onclick="sendWhatsAppEnquiry('Modern Box Storage Cot (Model 3)', 'ALFA-BED-03')">
+                Enquire Price
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="beds">
+          <div class="product-thumb">
+            <img src="images/products/bed4.jpg" alt="Alfa Classic Family Cot" />
+          </div>
+          <div class="product-info">
+            <span class="product-category-tag">Beds & Cots</span>
+            <h4 class="product-title">Classic Teak Finish Family Cot</h4>
+            <p class="product-specs">Reinforced Center Beam • Scratch-Resistant Polish • Built for Generations</p>
+            <div class="product-footer">
+              <span class="product-price">Factory Direct</span>
+              <a href="#" class="btn-wa-card" onclick="sendWhatsAppEnquiry('Classic Teak Finish Family Cot (Model 4)', 'ALFA-BED-04')">
+                Enquire Price
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="beds">
+          <div class="product-thumb">
+            <span class="product-badge">Heavy Duty</span>
+            <img src="images/products/bed5.jpg" alt="Alfa Premium Cot" />
+          </div>
+          <div class="product-info">
+            <span class="product-category-tag">Beds & Cots</span>
+            <h4 class="product-title">Premium Cushion-Back Cot</h4>
+            <p class="product-specs">Ergonomic Padded Headrest • Solid Wood Legs • Hydraulic Lift Option</p>
+            <div class="product-footer">
+              <span class="product-price">Factory Direct</span>
+              <a href="#" class="btn-wa-card" onclick="sendWhatsAppEnquiry('Premium Cushion-Back Cot (Model 5)', 'ALFA-BED-05')">
+                Enquire Price
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== 2. BEEROS & WARDROBES (beero1-2, almiraah1-2) ==================== -->
         <div class="product-card" data-category="almirahs storage">
-          <div class="product-thumb">
+          <div class="product-thumb contain-fit">
             <span class="product-badge">Factory Hot Deal</span>
-            <img src="https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?auto=format&fit=crop&w=600&q=80" alt="Steel Cupboard" />
+            <img src="images/products/beero1.jpg" alt="Heavy Gauge Steel Beero 1" />
           </div>
           <div class="product-info">
-            <span class="product-category-tag">Steel Cupboard</span>
-            <h4 class="product-title">Heavy Gauge Steel Almirah</h4>
-            <p class="product-specs">Anti-Rust Powder Coated CRCA Steel • Dual Lock Vault • Lifetime Hinge</p>
+            <span class="product-category-tag">Steel Beeros</span>
+            <h4 class="product-title">Heavy Gauge Steel Beero (Model 1)</h4>
+            <p class="product-specs">Thick CRCA Steel Sheet • Anti-Rust Powder Coating • Built-In Locker Vault</p>
             <div class="product-footer">
-              <span class="product-price">₹14,900</span>
-              <a href="#" class="btn-wa-card" onclick="sendWhatsAppEnquiry('Heavy Gauge Steel Almirah', 'ALFA-STL-04', '₹14,900')">
-                Enquire
+              <span class="product-price">Factory Direct</span>
+              <a href="#" class="btn-wa-card" onclick="sendWhatsAppEnquiry('Heavy Gauge Steel Beero (Model 1)', 'ALFA-BER-01')">
+                Enquire Price
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Product 3: Sofa -->
+        <div class="product-card" data-category="almirahs storage">
+          <div class="product-thumb contain-fit">
+            <span class="product-badge">Mirror & Locker</span>
+            <img src="images/products/beero2.jpg" alt="Heavy Gauge Steel Beero 2" />
+          </div>
+          <div class="product-info">
+            <span class="product-category-tag">Steel Beeros</span>
+            <h4 class="product-title">2-Door Steel Beero with Mirror</h4>
+            <p class="product-specs">Full-Length Dressing Mirror • Bangle Hanger & Secret Drawer • Heavy Hinges</p>
+            <div class="product-footer">
+              <span class="product-price">Factory Direct</span>
+              <a href="#" class="btn-wa-card" onclick="sendWhatsAppEnquiry('2-Door Steel Beero with Mirror (Model 2)', 'ALFA-BER-02')">
+                Enquire Price
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="almirahs">
+          <div class="product-thumb contain-fit">
+            <span class="product-badge">Best Seller</span>
+            <img src="images/products/almiraah1.jpg" alt="Alfa Designer Almirah 1" />
+          </div>
+          <div class="product-info">
+            <span class="product-category-tag">Beeros & Wardrobes</span>
+            <h4 class="product-title">Designer 3-Door Almirah Wardrobe</h4>
+            <p class="product-specs">Spacious Hanging Rod & Shelving • Bottom Storage Drawers • Custom Colors</p>
+            <div class="product-footer">
+              <span class="product-price">Factory Direct</span>
+              <a href="#" class="btn-wa-card" onclick="sendWhatsAppEnquiry('Designer 3-Door Almirah Wardrobe (Model 1)', 'ALFA-ALM-01')">
+                Enquire Price
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="almirahs">
+          <div class="product-thumb contain-fit">
+            <img src="images/products/almiraah2.jpg" alt="Alfa Designer Almirah 2" />
+          </div>
+          <div class="product-info">
+            <span class="product-category-tag">Beeros & Wardrobes</span>
+            <h4 class="product-title">Modern Finish Wardrobe Almirah</h4>
+            <p class="product-specs">Smooth Lockable Doors • High-Load Shelves • Custom Room Height Available</p>
+            <div class="product-footer">
+              <span class="product-price">Factory Direct</span>
+              <a href="#" class="btn-wa-card" onclick="sendWhatsAppEnquiry('Modern Finish Wardrobe Almirah (Model 2)', 'ALFA-ALM-02')">
+                Enquire Price
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== 3. SOFAS & RECLINERS (sofa1 - sofa5) ==================== -->
         <div class="product-card" data-category="sofas">
           <div class="product-thumb">
-            <span class="product-badge">New Arrival</span>
-            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=600&q=80" alt="L Shape Sofa" />
+            <span class="product-badge">Trending</span>
+            <img src="images/products/sofa1.jpg" alt="Alfa Luxury Sofa 1" />
           </div>
           <div class="product-info">
             <span class="product-category-tag">Sofas & Recliners</span>
-            <h4 class="product-title">Nordic 5-Seater L-Shape Sofa</h4>
-            <p class="product-specs">High-Density 40D Foam • Scratch-Resistant Suede Fabric • Hardwood Frame</p>
+            <h4 class="product-title">Luxury 3+1+1 Living Room Sofa Set</h4>
+            <p class="product-specs">40-Density High-Resilience Foam • Solid Hardwood Frame • Custom Fabric Shades</p>
             <div class="product-footer">
-              <span class="product-price">₹34,000</span>
-              <a href="#" class="btn-wa-card" onclick="sendWhatsAppEnquiry('Nordic 5-Seater L-Shape Sofa', 'ALFA-SOF-02', '₹34,000')">
-                Enquire
+              <span class="product-price">Factory Direct</span>
+              <a href="#" class="btn-wa-card" onclick="sendWhatsAppEnquiry('Luxury 3+1+1 Living Room Sofa Set (Model 1)', 'ALFA-SOF-01')">
+                Enquire Price
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Product 4: Dining Table -->
+        <div class="product-card" data-category="sofas">
+          <div class="product-thumb">
+            <span class="product-badge">L-Shape Corner</span>
+            <img src="images/products/sofa2.jpg" alt="Alfa L-Shape Sofa 2" />
+          </div>
+          <div class="product-info">
+            <span class="product-category-tag">Sofas & Recliners</span>
+            <h4 class="product-title">Modern L-Shape Corner Lounger</h4>
+            <p class="product-specs">Space-Saving Corner Design • Stain-Resistant Upholstery • Left/Right Custom</p>
+            <div class="product-footer">
+              <span class="product-price">Factory Direct</span>
+              <a href="#" class="btn-wa-card" onclick="sendWhatsAppEnquiry('Modern L-Shape Corner Lounger (Model 2)', 'ALFA-SOF-02')">
+                Enquire Price
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="sofas">
+          <div class="product-thumb">
+            <img src="images/products/sofa3.jpg" alt="Alfa Designer Sofa 3" />
+          </div>
+          <div class="product-info">
+            <span class="product-category-tag">Sofas & Recliners</span>
+            <h4 class="product-title">Royal Tufted Cushion Sofa Set</h4>
+            <p class="product-specs">Plush Back Cushions • Heavy Teak Wood Base & Arms • 5-Year Frame Warranty</p>
+            <div class="product-footer">
+              <span class="product-price">Factory Direct</span>
+              <a href="#" class="btn-wa-card" onclick="sendWhatsAppEnquiry('Royal Tufted Cushion Sofa Set (Model 3)', 'ALFA-SOF-03')">
+                Enquire Price
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="sofas">
+          <div class="product-thumb">
+            <img src="images/products/sofa4.jpg" alt="Alfa Wooden Arm Sofa 4" />
+          </div>
+          <div class="product-info">
+            <span class="product-category-tag">Sofas & Recliners</span>
+            <h4 class="product-title">Teak Frame Wooden Sofa Set</h4>
+            <p class="product-specs">100% Seasoned Wood Armrests • Removable Zippered Covers • Easy Maintenance</p>
+            <div class="product-footer">
+              <span class="product-price">Factory Direct</span>
+              <a href="#" class="btn-wa-card" onclick="sendWhatsAppEnquiry('Teak Frame Wooden Sofa Set (Model 4)', 'ALFA-SOF-04')">
+                Enquire Price
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="sofas">
+          <div class="product-thumb">
+            <span class="product-badge">New Arrival</span>
+            <img src="images/products/sofa5.jpg" alt="Alfa Premium Sofa 5" />
+          </div>
+          <div class="product-info">
+            <span class="product-category-tag">Sofas & Recliners</span>
+            <h4 class="product-title">Executive Lounge Sofa & Cushions</h4>
+            <p class="product-specs">Deep Comfort Seating • Sweat-Free Premium Fabric • Custom Seater Options</p>
+            <div class="product-footer">
+              <span class="product-price">Factory Direct</span>
+              <a href="#" class="btn-wa-card" onclick="sendWhatsAppEnquiry('Executive Lounge Sofa & Cushions (Model 5)', 'ALFA-SOF-05')">
+                Enquire Price
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== 4. DINING TABLES (dinningtable1, dinngtable2, diningtable3-4) ==================== -->
         <div class="product-card" data-category="dining">
           <div class="product-thumb">
-            <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=600&q=80" alt="Dining Table" />
+            <span class="product-badge">Family Favorite</span>
+            <img src="images/products/dinningtable1.jpg" alt="Alfa Dining Table 1" />
           </div>
           <div class="product-info">
             <span class="product-category-tag">Dining Tables</span>
-            <h4 class="product-title">Solid Sheesham 6-Seater Table</h4>
-            <p class="product-specs">100% Solid Sheesham Wood • 6 Cushioned Ergonomic Chairs • Walnut Polish</p>
+            <h4 class="product-title">Solid Wood 6-Seater Dining Set</h4>
+            <p class="product-specs">Thick Tabletop • 6 Matching Cushioned Chairs • Heat & Spill Resistant Polish</p>
             <div class="product-footer">
-              <span class="product-price">₹26,500</span>
-              <a href="#" class="btn-wa-card" onclick="sendWhatsAppEnquiry('Solid Sheesham 6-Seater Table', 'ALFA-DIN-09', '₹26,500')">
-                Enquire
+              <span class="product-price">Factory Direct</span>
+              <a href="#" class="btn-wa-card" onclick="sendWhatsAppEnquiry('Solid Wood 6-Seater Dining Set (Model 1)', 'ALFA-DIN-01')">
+                Enquire Price
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Product 5: Bed -->
-        <div class="product-card" data-category="beds">
+        <div class="product-card" data-category="dining">
           <div class="product-thumb">
-            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=600&q=80" alt="King Bed" />
+            <img src="images/products/dinngtable2.jpg" alt="Alfa Dining Table 2" />
           </div>
           <div class="product-info">
-            <span class="product-category-tag">Beds & Bedroom</span>
-            <h4 class="product-title">Hydraulic Storage King Bed</h4>
-            <p class="product-specs">Easy-Lift German Hydraulic Pumps • Massive Storage Box • Padded Headrest</p>
+            <span class="product-category-tag">Dining Tables</span>
+            <h4 class="product-title">Compact 4-Seater Family Dining</h4>
+            <p class="product-specs">Ideal for Modern Homes • Ergonomic High-Back Chairs • Custom Polish Shades</p>
             <div class="product-footer">
-              <span class="product-price">₹31,000</span>
-              <a href="#" class="btn-wa-card" onclick="sendWhatsAppEnquiry('Hydraulic Storage King Bed', 'ALFA-BED-05', '₹31,000')">
-                Enquire
+              <span class="product-price">Factory Direct</span>
+              <a href="#" class="btn-wa-card" onclick="sendWhatsAppEnquiry('Compact 4-Seater Family Dining (Model 2)', 'ALFA-DIN-02')">
+                Enquire Price
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Product 6: Office Lockers -->
-        <div class="product-card" data-category="storage">
+        <div class="product-card" data-category="dining">
           <div class="product-thumb">
-            <img src="https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?auto=format&fit=crop&w=600&q=80" alt="Office Locker" />
+            <img src="images/products/diningtable3.jpg" alt="Alfa Dining Table 3" />
           </div>
           <div class="product-info">
-            <span class="product-category-tag">Office & Lockers</span>
-            <h4 class="product-title">6-Door Industrial Staff Locker</h4>
-            <p class="product-specs">Individual Master Lock Keys • Ventilation Louvers • Cold Rolled Steel</p>
+            <span class="product-category-tag">Dining Tables</span>
+            <h4 class="product-title">Designer Glass & Wood Dining Set</h4>
+            <p class="product-specs">Toughened Safety Glass Top • Solid Timber Legs • Cushioned Dining Chairs</p>
             <div class="product-footer">
-              <span class="product-price">₹18,200</span>
-              <a href="#" class="btn-wa-card" onclick="sendWhatsAppEnquiry('6-Door Industrial Staff Locker', 'ALFA-LCK-11', '₹18,200')">
-                Enquire
+              <span class="product-price">Factory Direct</span>
+              <a href="#" class="btn-wa-card" onclick="sendWhatsAppEnquiry('Designer Glass & Wood Dining Set (Model 3)', 'ALFA-DIN-03')">
+                Enquire Price
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="dining">
+          <div class="product-thumb">
+            <img src="images/products/diningtable4.jpg" alt="Alfa Dining Table 4" />
+          </div>
+          <div class="product-info">
+            <span class="product-category-tag">Dining Tables</span>
+            <h4 class="product-title">Royal Teak Finish Dining Table</h4>
+            <p class="product-specs">Heavy Carved Legs • Available in 4, 6 & 8 Seater • Direct Workshop Rate</p>
+            <div class="product-footer">
+              <span class="product-price">Factory Direct</span>
+              <a href="#" class="btn-wa-card" onclick="sendWhatsAppEnquiry('Royal Teak Finish Dining Table (Model 4)', 'ALFA-DIN-04')">
+                Enquire Price
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== 5. HOME INTERIORS ==================== -->
+        <div class="product-card" data-category="interiors">
+          <div class="product-thumb">
+            <span class="product-badge">Custom Turnkey</span>
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Modular Home Interiors" />
+          </div>
+          <div class="product-info">
+            <span class="product-category-tag">Home Interiors</span>
+            <h4 class="product-title">Modular Kitchen & TV Unit Package</h4>
+            <p class="product-specs">BWP Marine Ply • Soft-Close Channels • Custom Wall Paneling & Wardrobes</p>
+            <div class="product-footer">
+              <span class="product-price">Custom Quote</span>
+              <a href="#" class="btn-wa-card" onclick="sendWhatsAppEnquiry('Modular Kitchen & TV Unit Interior Package', 'ALFA-INT-01')">
+                Enquire Price
               </a>
             </div>
           </div>
@@ -1328,7 +1568,7 @@
       <div class="contact-grid">
         <div>
           <h4>Alfa Furnitures</h4>
-          <p style="color: #D4C7BA; font-size: 14px; margin-bottom: 20px;">We specialize in durable metal & wooden storage solutions, luxury sofas, and customized home fittings built to your room specifications.</p>
+          <p style="color: #D4C7BA; font-size: 14px; margin-bottom: 20px;">We specialize in solid wood cots, heavy-gauge steel beeros, luxury sofas, and complete customized home interiors built to your room specifications.</p>
           <p style="color: #A3968A; font-size: 13px;">© 2026 Alfa Furnitures. All rights reserved.</p>
         </div>
 
@@ -1337,7 +1577,7 @@
           <ul class="contact-info-list">
             <li><strong>Mon – Sat:</strong> 9:30 AM – 8:30 PM</li>
             <li><strong>Sunday:</strong> 10:00 AM – 7:00 PM</li>
-            <li>Direct factory consultations welcome.</li>
+            <li>Direct factory & interior site visits welcome.</li>
           </ul>
         </div>
 
@@ -1385,8 +1625,8 @@
     }, 4500);
 
     // 3. Dynamic WhatsApp Order Message Generator
-    function sendWhatsAppEnquiry(productName, productCode, price) {
-      const message = `Hello Alfa Furnitures, I am interested in ordering/inquiring about:%0A%0A*Product:* ${productName}%0A*Code:* ${productCode}%0A*Price:* ${price}%0A%0APlease let me know the customization options and delivery details.`;
+    function sendWhatsAppEnquiry(productName, productCode) {
+      const message = `Hello Alfa Furnitures, I am interested in knowing the factory price and details for:%0A%0A*Product:* ${productName}%0A*Code:* ${productCode}%0A%0APlease share available sizes, colors, and delivery details.`;
       const waUrl = `https://wa.me/${WA_PHONE}?text=${message}`;
       window.open(waUrl, '_blank');
     }
